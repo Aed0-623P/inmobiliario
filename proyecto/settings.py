@@ -57,6 +57,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "proyecto.urls"
 
+LOGIN_REDIRECT_URL = 'index'
+LOGIN_URL = 'login'  # URL a la que se redirige si un usuario no está autenticado y trata de acceder a una vista protegida
+LOGOUT_URL = 'logout' 
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",

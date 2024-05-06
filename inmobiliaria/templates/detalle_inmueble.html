@@ -2,9 +2,9 @@
 
 {% block title %}Página de Inicio{% endblock %}
 {% block content %}
-    {{inmuebles.nombre}}
+    {{inmueble.nombre}}
     {% if user.usuario.tipo_usuario == 'arrendatario' %}
-    <a href="{% url 'generar_solicitud_arriendo' inmuebles.id %}">Generar Solicitud de Arriendo</a>
+    <a href="{% url 'generar_solicitud_arriendo' inmueble.id %}">Generar Solicitud de Arriendo</a>
 {% endif %}
     
 {% endblock %}
