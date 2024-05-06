@@ -13,15 +13,10 @@ def index(request):
     usuario = request.user
     return render(request, 'index.html',{'inmuebles': inmuebles})
 
-
-
 @login_required
 def detalle_inmueble(request, id):
     inmueble = Inmueble.objects.get(pk=id)
     return render(request, 'detalle_inmueble.html', {'inmueble': inmueble})
-
-
-
 
 def registro_usuario(request):
     if request.method == 'POST':
@@ -62,8 +57,6 @@ def generar_solicitud_arriendo(request, id):
     else:
         return redirect('index')
     
-    
-    
 @login_required
 def solicitudes_arrendador(request):
     # Verificar si el usuario es un arrendador
@@ -73,8 +66,7 @@ def solicitudes_arrendador(request):
         return render(request, 'solicitudes_arrendador.html', {'solicitudes': solicitudes})
     else:
         # Redirigir a otra página si el usuario no es un arrendador
-        return redirect('index')  
-  
+        return redirect('index')
   
 @login_required
 def alta_inmueble(request):

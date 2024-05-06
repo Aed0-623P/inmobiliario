@@ -3,31 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Inmobiliaria{% endblock %}</title>
+    <title>{% block title %}Mi Sitio Web{% endblock %}</title>
     <!-- Agregar aquí tus enlaces a archivos CSS externos, fuentes, etc. -->
 </head>
 <body>
 
 <header>
     <!-- Encabezado de tu sitio, como el logo, barra de navegación, etc. -->
-    <h1>Bienvenido a Inmobiliaria</h1>
+    <h1>Mi Sitio Web</h1>
     <nav>
         <ul>
             <li><a href="{% url 'index' %}">Inicio</a></li>
             <li><a href="{% url 'registro_usuario' %}">Registro</a></li>
             {% if user.is_authenticated and user.usuario.tipo_usuario == 'arrendador' %}
-            <li><a href="{% url 'alta_inmueble' %}">Alta de Inmueble</a></li>
+                <li><a href="{% url 'alta_inmueble' %}">Alta de Inmueble</a></li>
+                <li><a href="{% url 'solicitudes_arrendador' %}">Solicitudes de Arriendo</a></li>
             {% endif %}
-            {% if user.is_authenticated and user.usuario.tipo_usuario == 'arrendador' %}
-            <li><a href="{% url 'solicitudes_arrendador' %}">solicitudes de arriendo</a></li>
-            {% endif %}
-            
         </ul>
         {% if request.user.is_authenticated %}
-        <p>Bienvenido, {{ user.username }} eres un {{user.usuario.tipo_usuario}}</p> <!-- Muestra el nombre completo del usuario -->
-        <a href="{% url 'logout' %}">Cerrar sesión</a> <!-- Agrega un enlace para cerrar sesión -->
+            <p>Bienvenido, {{ user.username }}, eres un {{ user.usuario.tipo_usuario }}</p>
+            <a href="{% url 'logout' %}">Cerrar sesión</a>
         {% else %}
-        <a href="{% url 'login' %}">Iniciar sesión</a> <!-- Agrega un enlace para iniciar sesión -->
+            <a href="{% url 'login' %}">Iniciar sesión</a>
         {% endif %}
     </nav>
 </header>

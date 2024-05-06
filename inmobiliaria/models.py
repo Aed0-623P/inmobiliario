@@ -7,7 +7,7 @@ class Usuario(User):
     TIPO_USUARIO_CHOISES = [
         ('arrendatario', 'Arrendatario'),
         ('arrendador', 'Arrendador'),
-    ]
+]
     nombres = models.CharField(max_length=50)
     apellidos = models.CharField(max_length=50)
     rut = models.CharField(max_length=10, unique=True)
@@ -18,9 +18,7 @@ class Usuario(User):
 
     def __str__(self):
         return f"{self.nombres} {self.apellidos}"
-        
-        
-        
+
 class Inmueble(models.Model):
     TIPO_INMUEBLE_CHOISES = [
         ('casa','Casa'),
@@ -41,13 +39,9 @@ class Inmueble(models.Model):
     cantidad_banos = models.PositiveIntegerField()
     tipo_de_inmueble=models.CharField(max_length=12, choices=TIPO_INMUEBLE_CHOISES)
     propietario = models.ForeignKey(Usuario, on_delete=models.CASCADE, default=1)
-    
 
-    
     def __str__(self) -> str:
         return f"{self.nombre}"
-    
-
 
 class SolicitudArriendo(models.Model):
     arrendatario = models.ForeignKey(Usuario, on_delete=models.CASCADE)

@@ -1,0 +1,142 @@
+[
+    {
+        "model": "inmobiliaria.inmueble",
+        "pk": 1,
+        "fields": {
+            "nombre": "casa1",
+            "direccion": "casita",
+            "descripcion": "big casa",
+            "imagen": "inmueble-3_x4QqARE.jpg",
+            "precio": "123",
+            "comuna": "macul",
+            "disponible": true,
+            "m2_construidos": "77.00",
+            "m2_terreno": "152.00",
+            "cantidad_estacionamientos": 3,
+            "cantidad_habitaciones": 4,
+            "cantidad_banos": 2,
+            "tipo_de_inmueble": "casa",
+            "propietario": 4
+        }
+    },
+    {
+        "model": "inmobiliaria.inmueble",
+        "pk": 5,
+        "fields": {
+            "nombre": "departamento2",
+            "direccion": "edificio2",
+            "descripcion": "amplio departamento",
+            "imagen": "inmueble-2_x9ZwRBV.jpg",
+            "precio": "200",
+            "comuna": "providencia",
+            "disponible": true,
+            "m2_construidos": "90.00",
+            "m2_terreno": "0.00",
+            "cantidad_estacionamientos": 2,
+            "cantidad_habitaciones": 3,
+            "cantidad_banos": 2,
+            "tipo_de_inmueble": "departamento",
+            "propietario": 5
+        }
+    },
+    {
+        "model": "inmobiliaria.inmueble",
+        "pk": 6,
+        "fields": {
+            "nombre": "casa3",
+            "direccion": "avenida3",
+            "descripcion": "casa acogedora",
+            "imagen": "inmueble-1_d8KwQBG.jpg",
+            "precio": "150",
+            "comuna": "las condes",
+            "disponible": true,
+            "m2_construidos": "120.00",
+            "m2_terreno": "200.00",
+            "cantidad_estacionamientos": 2,
+            "cantidad_habitaciones": 3,
+            "cantidad_banos": 2,
+            "tipo_de_inmueble": "casa",
+            "propietario": 6
+        }
+    },
+    {
+        "model": "inmobiliaria.inmueble",
+        "pk": 7,
+        "fields": {
+            "nombre": "departamento4",
+            "direccion": "torre4",
+            "descripcion": "moderno departamento",
+            "imagen": "inmueble-4_c2LxOFI.jpg",
+            "precio": "300",
+            "comuna": "ñuñoa",
+            "disponible": true,
+            "m2_construidos": "80.00",
+            "m2_terreno": "0.00",
+            "cantidad_estacionamientos": 1,
+            "cantidad_habitaciones": 2,
+            "cantidad_banos": 1,
+            "tipo_de_inmueble": "departamento",
+            "propietario": 7
+        }
+    },
+    {
+        "model": "inmobiliaria.inmueble",
+        "pk": 8,
+        "fields": {
+            "nombre": "casa5",
+            "direccion": "calle5",
+            "descripcion": "linda casa",
+            "imagen": "inmueble-5_b9YwPTK.jpg",
+            "precio": "180",
+            "comuna": "vitacura",
+            "disponible": true,
+            "m2_construidos": "150.00",
+            "m2_terreno": "300.00",
+            "cantidad_estacionamientos": 2,
+            "cantidad_habitaciones": 4,
+            "cantidad_banos": 3,
+            "tipo_de_inmueble": "casa",
+            "propietario": 8
+        }
+    },
+    {
+        "model": "inmobiliaria.inmueble",
+        "pk": 9,
+        "fields": {
+            "nombre": "departamento6",
+            "direccion": "edificio6",
+            "descripcion": "departamento moderno",
+            "imagen": "inmueble-6_e4LmONF.jpg",
+            "precio": "250",
+            "comuna": "santiago",
+            "disponible": true,
+            "m2_construidos": "100.00",
+            "m2_terreno": "0.00",
+            "cantidad_estacionamientos": 1,
+            "cantidad_habitaciones": 2,
+            "cantidad_banos": 1,
+            "tipo_de_inmueble": "departamento",
+            "propietario": 9
+        }
+    },
+    {
+        "model": "inmobiliaria.inmueble",
+        "pk": 10,
+        "fields": {
+            "nombre": "casa7",
+            "direccion": "avenida7",
+            "descripcion": "acogedora casa",
+            "imagen": "inmueble-7_f8NpQSC.jpg",
+            "precio": "170",
+            "comuna": "puente alto",
+            "disponible": true,
+            "m2_construidos": "110.00",
+            "m2_terreno": "200.00",
+            "cantidad_estacionamientos": 2,
+            "cantidad_habitaciones": 3,
+            "cantidad_banos": 2,
+            "tipo_de_inmueble": "casa",
+            "propietario": 10
+        }
+    }
+]

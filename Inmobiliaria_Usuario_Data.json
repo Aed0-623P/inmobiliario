@@ -1,0 +1,93 @@
+[
+    {
+        "model": "inmobiliaria.usuario",
+        "pk": 4,
+        "fields": {
+            "nombres": "aedo",
+            "apellidos": "aedo",
+            "rut": "18622",
+            "direccion": "our house",
+            "telefono": "964",
+            "tipo_usuario": "arrendatario",
+            "correo_electronico": "house@correo.cl"
+        }
+    },
+    {
+        "model": "inmobiliaria.usuario",
+        "pk": 5,
+        "fields": {
+            "nombres": "mr arrendador",
+            "apellidos": "arrenda dor",
+            "rut": "656565",
+            "direccion": "donde arriendo",
+            "telefono": "4567",
+            "tipo_usuario": "arrendador",
+            "correo_electronico": "arrendador1@correo.cl"
+        }
+    },
+    {
+        "model": "inmobiliaria.usuario",
+        "pk": 6,
+        "fields": {
+            "nombres": "María",
+            "apellidos": "López",
+            "rut": "3245678-9",
+            "direccion": "Calle Sol 123",
+            "telefono": "987654321",
+            "tipo_usuario": "arrendatario",
+            "correo_electronico": "maria.lopez@email.com"
+        }
+    },
+    {
+        "model": "inmobiliaria.usuario",
+        "pk": 7,
+        "fields": {
+            "nombres": "Pedro",
+            "apellidos": "Martínez",
+            "rut": "4567890-1",
+            "direccion": "Avenida Luna 456",
+            "telefono": "654321987",
+            "tipo_usuario": "arrendatario",
+            "correo_electronico": "pedro.martinez@email.com"
+        }
+    },
+    {
+        "model": "inmobiliaria.usuario",
+        "pk": 8,
+        "fields": {
+            "nombres": "Lucía",
+            "apellidos": "García",
+            "rut": "5678901-2",
+            "direccion": "Plaza Estrella 789",
+            "telefono": "123456789",
+            "tipo_usuario": "arrendatario",
+            "correo_electronico": "lucia.garcia@email.com"
+        }
+    },
+    {
+        "model": "inmobiliaria.usuario",
+        "pk": 9,
+        "fields": {
+            "nombres": "Andrés",
+            "apellidos": "Fernández",
+            "rut": "6789012-3",
+            "direccion": "Camino Marítimo 321",
+            "telefono": "321987654",
+            "tipo_usuario": "arrendador",
+            "correo_electronico": "andres.fernandez@email.com"
+        }
+    },
+    {
+        "model": "inmobiliaria.usuario",
+        "pk": 10,
+        "fields": {
+            "nombres": "Laura",
+            "apellidos": "Sánchez",
+            "rut": "7890123-4",
+            "direccion": "Calle Montaña 567",
+            "telefono": "987123654",
+            "tipo_usuario": "arrendador",
+            "correo_electronico": "laura.sanchez@email.com"
+        }
+    }
+]
