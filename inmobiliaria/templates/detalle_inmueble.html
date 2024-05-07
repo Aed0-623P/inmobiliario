@@ -3,6 +3,7 @@
 {% block title %}Página de Inicio{% endblock %}
 {% block content %}
     {{inmueble.nombre}}
+    {{inmueble.comuna}}
     {% if user.usuario.tipo_usuario == 'arrendatario' %}
     <a href="{% url 'generar_solicitud_arriendo' inmueble.id %}">Generar Solicitud de Arriendo</a>
 {% endif %}
