@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
-{% block title %}Página de Inicio{% endblock %}
-
 {% block content %}
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-inner">
@@ -48,19 +45,18 @@
   </button>
 </div>
 
-
-    <h2>Bienvenido a mi sitio web!</h2>
-    <p>Este es el contenido de la página de inicio.</p>
-
-
-    {% for inm in inmuebles %}
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="media/{{inm.imagen}}" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">{{inm.nombre}}</h5>
-          <p class="card-text">{{inm.descripcion}}</p>
-          <li><a href="{% url 'detalle' inm.id %}">detalle del inmueble</a></li>
-        </div>
-      </div>
-    {% endfor %}
+<div class="container-fixed text-center">
+  <div class="row row-cols-auto" style="padding: 50px;">
+      {% for inm in inmuebles %}
+          <div class="card col-lg-4 col-sm-3">
+              <img class="card-img-top" src="media/{{inm.imagen}}">
+              <div class="card-body">
+                  <h5 class="card-title">{{inm.nombre}}</h5>
+                  <p class="card-text">{{inm.descripcion}}</p>
+                  <a href="{% url 'detalle' inm.id %}" class="btn btn-primary mt-auto">Detalle del inmueble</a>
+              </div>
+          </div>
+      {% endfor %}
+  </div>
+</div>
 {% endblock %}

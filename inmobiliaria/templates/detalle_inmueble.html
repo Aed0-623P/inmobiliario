@@ -1,11 +1,24 @@
 {% extends 'base.html' %}
 
+
 {% block title %}Página de Inicio{% endblock %}
+{% load static %}
 {% block content %}
-    {{inmueble.nombre}}
-    {{inmueble.comuna}}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/media/{{inmueble.imagen}}">
+        <div class="card-body">
+          <h5 class="card-title">{{inmueble.nombre}}</h5>
+          <p class="card-text">{{inmueble.descripcion}}</p>
+          <p>{{inmueble.comuna}}</p>
+        </div>
+      </div>
     {% if user.usuario.tipo_usuario == 'arrendatario' %}
     <a href="{% url 'generar_solicitud_arriendo' inmueble.id %}">Generar Solicitud de Arriendo</a>
-{% endif %}
+    {% endif %}
+
+    {% if user.usuario.tipo_usuario == 'arrendador' %}
+    <a href="{% url 'editar_inmueble' inmueble.id %}" onclick="return confirm('¿editar?');">Editar Inmueble</a>
+    <a href="{% url 'eliminar_inmueble' inmueble.id %}" onclick="return confirm('¿quieres eliminar?');">Eliminar Inmueble</a>
+    {% endif %}
     
 {% endblock %}
