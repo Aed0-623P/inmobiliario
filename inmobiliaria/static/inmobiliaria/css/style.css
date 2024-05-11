@@ -1,6 +1,6 @@
 .carousel-inner {
     height: 400px;
-    overflow: hidden; /* Adjust the height as needed */
+    overflow: hidden; 
 }
   
 .carousel-item {

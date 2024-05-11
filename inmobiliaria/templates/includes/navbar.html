@@ -15,22 +15,20 @@
             <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Amapola Propiedades</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'dashboard' %}">dashboard</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'dashboard' %}">Dashboard</a>
             </li>
           {% if user.is_authenticated and user.usuario.tipo_usuario == 'arrendador' %}
           <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'alta_inmueble' %}">alta inmueble</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'alta_inmueble' %}">Alta inmueble</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'solicitudes_arrendador' %}">solicitud</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'solicitudes_arrendador' %}">Solicitud</a>
           </li>
           {% endif %}
         </ul>
-
+        
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         </ul>
-
-
         <!-- aqui y hacia abajo debería alinearse a la derecha en el navbar-->
 
         <ul class="navbar-nav ml-auto">
