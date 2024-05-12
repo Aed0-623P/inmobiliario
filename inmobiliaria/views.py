@@ -71,19 +71,41 @@ def solicitudes_arrendador(request):
         return redirect('index')
   
 @login_required
-def alta_inmueble(request):
+def crear_inmueble(request):
     if request.method == 'POST':
-        form = InmuebleForm(request.POST)
+        form = InmuebleForm(request.POST, request.FILES)
         print(form)
         if form.is_valid():
-            
             inmueble = form.save(commit=False)
-            inmueble.propietario = request.user
+            inmueble.propietario = request.user.usuario
             inmueble.save()
-            return redirect('inicio') 
+            return redirect('dashboard') 
     else:
         form = InmuebleForm()
     return render(request, 'alta_inmueble.html', {'form': form})
+
+
+
+@login_required
+def actualizar_inmueble(request, id):
+    inmueble = get_object_or_404(Inmueble, pk=id)
+    if request.method == 'POST':
+        form = InmuebleForm(request.POST, request.FILES, instance=inmueble)
+        if form.is_valid():
+            form.save()
+            return redirect('dashboard')
+    else:
+        form = InmuebleForm(instance=inmueble)
+    return render(request, 'editar_inmueble.html',{'form':form })
+        
+@login_required
+def eliminar_inmueble(request, id):
+    inmueble = get_object_or_404(Inmueble, pk=id)
+    if request.method == 'POST':
+        inmueble.delete()
+        return redirect('dashboard')
+    else:
+        return render(request,'eliminar_inmueble.html', {'inmueble':inmueble} )
 
 @login_required
 def dashboard(request):
