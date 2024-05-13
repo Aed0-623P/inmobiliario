@@ -4,21 +4,30 @@
 {% block title %}Página de Inicio{% endblock %}
 {% load static %}
 {% block content %}
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="/media/{{inmueble.imagen}}">
-        <div class="card-body">
-          <h5 class="card-title">{{inmueble.nombre}}</h5>
-          <p class="card-text">{{inmueble.descripcion}}</p>
-          <p>{{inmueble.comuna}}</p>
-        </div>
+
+<div class="card m-1" >
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/media/{{inmueble.imagen}}" class="img-fluid rounded-start">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{inmueble.nombre}}</h5>
+        <p class="card-text">{{inmueble.descripcion}}</p>
+        <p>{{inmueble.comuna}}</p>
+        {% if user.usuario.tipo_usuario == 'arrendatario' %}
+        <a href="{% url 'generar_solicitud_arriendo' inmueble.id %}">Generar Solicitud de Arriendo</a>
+        {% endif %}
       </div>
-    {% if user.usuario.tipo_usuario == 'arrendatario' %}
-    <a href="{% url 'generar_solicitud_arriendo' inmueble.id %}">Generar Solicitud de Arriendo</a>
-    {% endif %}
+    </div>
+  </div>
+</div>
 
     {% if user.usuario.tipo_usuario == 'arrendador' %}
     <a href="{% url 'editar_inmueble' inmueble.id %}" onclick="return confirm('¿editar?');">Editar Inmueble</a>
     <a href="{% url 'eliminar_inmueble' inmueble.id %}" onclick="return confirm('¿quieres eliminar?');">Eliminar Inmueble</a>
     {% endif %}
+
+
     
 {% endblock %}

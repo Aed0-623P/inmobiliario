@@ -3,10 +3,12 @@
 {% block title %}Página de Inicio{% endblock %}
 
 {% block content %}
-<h2>Alta de Inmueble</h2>
+<h2 class="text-center pt-5">Alta de Inmueble</h2>
+<div class="container justify-content-center" style="height: fit-content;">
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Guardar</button>
 </form>
+</div>
 {% endblock %}

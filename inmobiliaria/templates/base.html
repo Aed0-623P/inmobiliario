@@ -10,7 +10,8 @@
     <title>Amapola Propiedades</title>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
+
 <nav>
   {% block navbar %}
   {% include 'includes/navbar.html'%}
@@ -28,7 +29,7 @@
   {% endblock %}
 </main>
 
-<footer>
+<footer class="mt-auto">
   {% block footer %}
   {% include 'includes/footer.html'%}
   {% endblock footer %}

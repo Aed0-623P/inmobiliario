@@ -30,10 +30,12 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(next_page='index'), name='logout'),
     path('inmueble/<int:id>/',detalle_inmueble , name='detalle'),
     path('inmuebles/<int:id>/generar-solicitud/', generar_solicitud_arriendo, name='generar_solicitud_arriendo'),
-    path('alta-inmueble/', alta_inmueble, name='alta_inmueble'),
+    path('inmueble/<int:id>/editar_inmueble',actualizar_inmueble, name='editar_inmueble'),
+    path('inmueble/<int:id>/eliminar_inmueble',eliminar_inmueble, name='eliminar_inmueble'),
+    path('alta-inmueble/', crear_inmueble, name='alta_inmueble'),
     path('solicitudes/', solicitudes_arrendador, name='solicitudes_arrendador'),
     path('dashboard/', dashboard, name='dashboard'),
     path('perfil/', actualizar_usuario, name='actualizar_usuario'),
-     path('cambiar_estado_solicitud/<int:solicitud_id>/', cambiar_estado_solicitud, name='cambiar_estado_solicitud'),
+    path('cambiar_estado_solicitud/<int:solicitud_id>/', cambiar_estado_solicitud, name='cambiar_estado_solicitud'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,19 +1,23 @@
 <!-- registro_usuario.html -->
 {% extends 'base.html' %}
-{%load static%}
+{% load static %}
 
 <head>
     {% block extra_css %}<link rel="stylesheet" type="text/css" href="{% static 'inmobiliaria/css/login.css' %}">{% endblock %}
 </head>
 
 {% block title %}Página de Inicio{% endblock %}
+{% block navbar %}
+{% endblock navbar %}
+{% block header %}
+{% endblock header %}
 
 {% block content %}  
-<div class="container">
-    <h2>Registrarse</h2>  <!--ASIGNAR ENCIMA DEL FORMULARIO-->
+<h1 class="text-center pt-5">Registrarse</h1>  <!--ASIGNAR ENCIMA DEL FORMULARIO-->
+<div class="container" style="height: fit-content;">
     <form method="post">
         {% csrf_token %}
-        <div class="form-group">
+        <div class="form-group pt-2">
             <label for="id_username">Username:</label>
             <input type="text" class="form-control" id="id_username" name="username" required>
         </div>
@@ -45,7 +49,7 @@
             <label for="id_correo_electronico">Correo electrónico:</label>
             <input type="email" class="form-control" id="id_correo_electronico" name="correo_electronico" required>
         </div>
-        <div class="form-group">
+        <div class="form-group pb-3">
             <label for="id_tipo_usuario">Tipo usuario:</label>
             <select class="form-control" id="id_tipo_usuario" name="tipo_usuario" required>
                 <option value="arrendatario">Arrendatario</option>

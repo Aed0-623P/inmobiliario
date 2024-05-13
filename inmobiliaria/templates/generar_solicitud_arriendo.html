@@ -3,10 +3,12 @@
 {% block title %}Página de Inicio{% endblock %}
 {% load static %}
 {% block content %}
+<div class="container p-3">
 <h1>Generar Solicitud de Arriendo</h1>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Enviar Solicitud</button>
 </form>
+</div>
 {% endblock %}
