@@ -23,11 +23,13 @@
   </div>
 </div>
 
-    {% if user.usuario.tipo_usuario == 'arrendador' %}
-    <a href="{% url 'editar_inmueble' inmueble.id %}" onclick="return confirm('¿editar?');">Editar Inmueble</a>
-    <a href="{% url 'eliminar_inmueble' inmueble.id %}" onclick="return confirm('¿quieres eliminar?');">Eliminar Inmueble</a>
-    {% endif %}
+{% if user.usuario.tipo_usuario == 'arrendador' %}
+    <div class="container mt-5">
+        <a href="{% url 'editar_inmueble' inmueble.id %}" class="btn btn-primary mr-2" onclick="return confirm('¿Editar?');">Editar Inmueble</a>
+        <a href="{% url 'eliminar_inmueble' inmueble.id %}" class="btn btn-danger" onclick="return confirm('¿Quieres eliminar?');">Eliminar Inmueble</a>
+    </div>
+{% endif %}
 
-
+    
     
 {% endblock %}

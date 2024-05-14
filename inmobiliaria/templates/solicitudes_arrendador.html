@@ -3,6 +3,7 @@
 {% block title %}Página de Inicio{% endblock %}
 {% load static %}
 {% block content %}
+<div class="container">
 <h1 class="pt-2">Solicitudes Recibidas</h1>
 <ul>
     {% for solicitud in solicitudes %}
@@ -15,7 +16,7 @@
     <li>No hay solicitudes recibidas.</li>
     {% endfor %}
 </ul>
-   
+</div>
 
 
 {% endblock %}
