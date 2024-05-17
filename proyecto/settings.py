@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['inmobiliario.onrender.com']
-CSRF_TRUSTED_ORIGINS = ['inmobiliario.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://inmobiliario.onrender.com']
 
 
 # Application definition
