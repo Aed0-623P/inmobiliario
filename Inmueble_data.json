@@ -85,8 +85,8 @@
         "fields": {
             "nombre": "Casa pequeña",
             "direccion": "longaví",
-            "descripcion": "inmueble-5_b9YwPTK.jpg",
-            "imagen": "casa-de-campo-8x8-1.jpg",
+            "descripcion": "casa pequeña con gran terreno",
+            "imagen": "inmueble-5_b9YwPTK.jpg",
             "precio": "2600",
             "comuna": 178,
             "disponible": true,
